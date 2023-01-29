@@ -1,0 +1,25 @@
+@media (max-width: 992px) {
+  .navbarLink:hover {
+    background-color: aliceblue;
+  }
+}
+
+.navSettings {
+  flex-wrap: nowrap;
+}
+
+.transition {
+  /* opacity: 0.5; */
+  transition: all 0.5s ease;
+}
+
+.transition[data-isOpen="true"] {
+  /* width: 400px; */
+  height: 0;
+}
+
+.expandHeight {
+  /* height: 330px; */
+  height: fit-content;
+  /* transition: all 0.5s ease; */
+}

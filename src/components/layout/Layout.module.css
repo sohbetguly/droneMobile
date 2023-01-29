@@ -1,0 +1,15 @@
+.carBgImg {
+  /* background-image: linear-gradient(
+      to right rgba(11, 165, 0, 0.8),
+      rgba(11, 165, 0, 0.8)
+    ),
+    url("../../images/layout/orange-sports-car-wallpaper-1440x960_37.jpg"); */
+  background: 
+    /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(23, 103, 0, 0.8),
+      rgba(23, 103, 0, 0.8)
+    ),
+    /* bottom, image */
+      url("../../images/layout/orange-sports-car-wallpaper-1440x960_37.jpg");
+  background-size: cover;
+}
