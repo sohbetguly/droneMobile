@@ -1,7 +1,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import React from "react";
-import brands from "../../utils/brands";
+// import brands from "../../utils/brands";
 import "@splidejs/react-splide/css/sea-green";
 import "@splidejs/react-splide/css/skyblue";
 import "@splidejs/react-splide/css/core";
@@ -36,13 +36,13 @@ function Brands() {
         },
       }}
     >
-      {brands.map(({ id, image }) => (
+      {/* {brands.map(({ id, image }) => (
         <SplideSlide key={id}>
           <a href="#">
             <img className="img-fluid" src={image} alt="Image 1" />
           </a>
         </SplideSlide>
-      ))}
+      ))} */}
     </Splide>
   );
 }

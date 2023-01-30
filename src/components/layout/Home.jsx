@@ -60,17 +60,18 @@ function Home() {
           </Col>
         </Row>
       </motion.div>
-      <div className="container-xxl">
+      <div className="container-xxl bg-dark">
         <motion.div
           style={{
             height: "200px",
+            width: "100%",
           }}
-          className="p-2 column bg-danger"
+          className="bg-danger"
         >
-          <motion.div className="row ">
-            <motion.div className="bg-success">asdf</motion.div>
-            <motion.div className="bg-success">asdf</motion.div>
-            <motion.div className="bg-success">asdf</motion.div>
+          <motion.div className="row m-0">
+            <motion.div className="bg-success col">asdf</motion.div>
+            <motion.div className="bg-success col">asdf</motion.div>
+            <motion.div className="bg-success col">asdf</motion.div>
           </motion.div>
         </motion.div>
       </div>
