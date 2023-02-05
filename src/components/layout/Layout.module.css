@@ -13,3 +13,10 @@
       url("../../images/layout/orange-sports-car-wallpaper-1440x960_37.jpg");
   background-size: cover;
 }
+
+.manBgImage {
+  background-image: url("../../images/home/man_with_mobile.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+}
