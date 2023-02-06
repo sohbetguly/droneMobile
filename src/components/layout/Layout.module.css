@@ -20,3 +20,15 @@
   background-size: cover;
   min-height: 400px;
 }
+
+.alignStrech {
+  align-self: stretch;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.alignBottom {
+  vertical-align: top;
+}

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import image from "../../images/home/home-dronemobile-hero-min.png";
 import bgImage from "../../images/layout/orange-sports-car-wallpaper-1440x960_37.jpg";
 import classes from "./Layout.module.css";
+import Button from "./Button";
 
 // import howItWorks from "../../images/home/how-it-works-min.png";
 // import howToBuy from "../../images/home/how-to-buy.png";
@@ -39,7 +40,7 @@ function Home() {
         }}
         className={
           classes.carBgImg +
-          " container-xxl text-white d-flex justify-content-center px-4 px-md-5"
+          " text-white d-flex justify-content-center px-4 px-md-5"
         }
       >
         <Row
@@ -54,37 +55,14 @@ function Home() {
               Make your car smarter and safer with DroneMobile. Learn more about
               how DroneMobile keeps you safe and comfortable on the road.
             </p>
-            <motion.div
-              className="btn p-0 "
-              initial={{
-                color: "white",
-                backgroundColor: "ButtonText",
-                borderRadius: "3px",
-                boxShadow: "0 0 0 2px white",
-              }}
-              whileHover={{
-                color: "ButtonText",
-                backgroundColor: "white",
-              }}
-              style={{
-                transition: "all .0000001s",
-              }}
-            >
-              <Link
-                style={{ color: "inherit" }}
-                to="/how-it-works"
-                className="btn fw-bold"
-              >
-                How it works
-              </Link>
-            </motion.div>
+            <Button title="How it works" link="/how-it-works" />
           </Col>
           <Col sm="5" className="g-5">
             <img className="img-fluid" src={image} alt="" />{" "}
           </Col>
         </Row>
       </div>
-      <div className="container-xxl bg-white">
+      <div className="bg-white">
         <motion.div className="row mt-3">
           {dummyData.map(({ title, desc, img }) => {
             return (
@@ -134,11 +112,11 @@ function Home() {
             </Ratio>
           </div>
         </div>
-        <div className="row bg-secondary text-white mt-5">
+        <div className="row bg-secondary text-white mt-5 m-0">
           <div
             className={classes.manBgImage + " col-6 d-none d-md-block"}
           ></div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6 ">
             <div
               style={{ maxWidth: "400px" }}
               className="my-4 text-center text-md-start m-auto ms-md-auto"
@@ -188,8 +166,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-12 col-md-6 g-3">
+        <div className="row px-3">
+          <div className="col-12 col-md-6">
             <div className="mx-auto p-4 bg-light ">
               <div
                 style={{
@@ -218,7 +196,7 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-12 col-md-6 g-3">
+          <div className="col-12 col-md-6">
             <div className="mx-auto p-4 bg-light ">
               <div
                 style={{
@@ -248,14 +226,85 @@ function Home() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="my-4">
           <p className="fs-2">DroneMobile Blog</p>
-          <div className="row">
-            <div className="col-12 col-lg-3 col-md-6">asdf</div>
-            <div className="col-12 col-lg-3 col-md-6">asdf</div>
-            <div className="col-12 col-lg-3 col-md-6">asdf</div>
-            <div className="col-12 col-lg-3 col-md-6">asdf</div>
+          <div className="row px-3">
+            {[
+              {
+                img: require("../../images/home/blog/dronemobile-custom-control-screen-300x200.jpg"),
+                title:
+                  "How Can I Remote Start My Car with My Phone? (Updated 2023)",
+                desc: "DroneMobile’s remote start system adds comfort and…",
+                date: "Jan 10, 2023",
+                link: "blog/start-my-car-with-my-phone",
+              },
+              {
+                img: require("../../images/home/blog/Drone-subscriptions-thumb-300x169.jpg"),
+                title: "How to Buy A DroneMobile Subscription",
+                desc: "Fall is upon us, which means frost will soon be (or maybe…",
+                date: "Jan 05, 2023",
+                link: "blog/start-my-car-with-my-phone",
+              },
+              {
+                img: require("../../images/home/blog/dronemobile-diy-installation-300x214.jpg"),
+                title: "Can I Install DroneMobile Myself?",
+                desc: "If you're like us, you might be an avid do-it-yourselfer.…",
+                date: "Sep 26, 2022",
+              },
+              {
+                img: require("../../images/home/blog/car-sheild-300x180.jpg"),
+                title: "What is the Best Car Alarm in 2022?",
+                desc: "Car alarms need to be faster and smarter. That is why…",
+                date: "Jul 29, 2022",
+              },
+            ].map(({ title, desc, date, link, img }) => (
+              <div
+                key={title}
+                className={
+                  classes.alignStrech + " col-12 col-lg-3 col-md-6 text-start"
+                }
+              >
+                <div className="border d-flex flex-column h-100 align-items-start ">
+                  <Ratio aspectRatio="16x9">
+                    <Link to="#" className="overflow-hidden">
+                      <img className=" w-100" src={img} alt="" />
+                    </Link>
+                  </Ratio>
+                  <div className="px-3 flex-grow-1 ">
+                    <p className="text-muted fs-6">{date}</p>
+                    <h4>{title}</h4>
+                    <p className="fs-6">{desc}</p>
+                  </div>
+                  <Link
+                    className={
+                      classes.alignBottom +
+                      " btn text-success fw-bold mt-auto px-3"
+                    }
+                    to={link}
+                  >
+                    Learn more
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
+          <Link className="btn btn-success fw-bold my-4" to={"/asdf"}>
+            More from the blog
+          </Link>
+        </div>
+        <div className=" text-bg-success p-3 m-0 ">
+          <h3
+            className={
+              classes.alignBottom + " fw-normal m-0 d-inline-block me-4 me-sm-0"
+            }
+          >
+            Find an Authorized Retailer Today!
+          </h3>
+          <Button
+            className={classes.alignBottom + " mt-2 mt-sm-0 ms-4"}
+            title="Find a Dealer"
+            link="/find-a-dealer"
+          />
         </div>
       </div>
     </>

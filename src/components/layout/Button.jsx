@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Button({ title }) {
+function Button({ title, link, className }) {
   return (
     <motion.div
-      className="btn p-0 "
+      className={className + " btn p-0"}
       initial={{
         color: "white",
         backgroundColor: "ButtonText",
@@ -20,11 +20,7 @@ function Button({ title }) {
         transition: "all .0000001s",
       }}
     >
-      <Link
-        style={{ color: "inherit" }}
-        to="/how-it-works"
-        className="btn fw-bold"
-      >
+      <Link style={{ color: "inherit" }} to={link} className="btn fw-bold">
         {title}
       </Link>
     </motion.div>

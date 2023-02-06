@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container-xxl bg-white p-0">
       <NavigationBar />
       <Layout />
       <Footer />
